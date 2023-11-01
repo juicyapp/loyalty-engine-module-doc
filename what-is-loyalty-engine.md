@@ -106,10 +106,33 @@ stateDiagram-v2
 - Must explain the meaning of the scheme
 - Examples
     - RewardScheme: `tier-gold-milestone`
-    - ItemScheme: `coupon-10-percent`
+    - ItemScheme: `voucher-10-percent`
+- For multiple merchant setup (platform), it is recommended to prefix the code with merchant code
+    - `merchant1-tier-gold-milestone`
+    - `merchant2-tier-gold-milestone`
 
 ## Grouping
 
- - `group_id` exist in every scheme. It is for isolating schemes with each other. In other words, different group means differnt "Loyalty Program"
+ - `group_id` exist in account and every scheme. It is for isolating schemes with each other. In other words, different group means differnt "Loyalty Program"
  - For example, if you have 2 loyalty programs, you can create 2 groups, and create all schemes under the group. This will prevent the schemes from being mixed up.
- -
+ - A `NULL` `group_id` means the scheme is shared accross all groups. For example, a `PointScheme` with `group_id` `NULL` means the point can be earned by any account in any group.
+
+```mermaid
+---
+title: Interaction of Group and Scheme
+---
+flowchart TD
+    subgraph "Group 1"
+    a1(Account)-->sp1(Point Scheme)
+    end
+    subgraph "Group 2"
+    a2(Account)-->sp2(Point Scheme)
+    end
+    an(Account)-->spn(Point Scheme)
+    a1 x-.Not Allowed.-xsp2
+    a2 x-.Not Allowed.-xsp1
+    a1-->spn
+    a2-->spn
+    an-->sp1
+    an-->sp2
+```

@@ -33,7 +33,7 @@ sequenceDiagram
 |account_id|Reference to the account holder|
 |token|Unique Code, can be use like a coupon code, for generate QR Code|
 |usage_count|**Null means infinity usages**|
-|source|`direct` - Issue to account directly <br />`reward` - Earned from `mission` or `reward` issue|
+|source|`direct` - Issue to account directly <br />`reward` - Earned from `mission` or `reward` issue / redeem|
 |status|`active`, `disable` For controlling availablilty|
 |issued_at|Time of point record added to account|
 |activate_at|Won't able to use **before** it|

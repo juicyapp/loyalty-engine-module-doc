@@ -62,7 +62,7 @@ flowchart LR
 |account_id|Reference to the account holder|
 |amount|Actual amount for point calculation, can be `+ve` or `-ve`|
 |intended_amount|Should be equal to `amount` in normal situations. Not for calculation. Can be used when max point reached but still want to calculate how much earned in total|
-|source|`direct` - Issue to account directly <br />`reward` - Earned from `mission` or `reward` issue <br />`initial_point` - bt `init_amount` in scheme<br />`redemption` - From redeem a `reward`|
+|source|`direct` - Issue to account directly <br />`reward` - Earned from `mission` or `reward` issue <br />`initial_point` - by `init_amount` in scheme<br />`redemption` - From redeem a `reward`|
 |issued_at|Time of point record added to account|
 |activate_at|Won't able to use **before** it|
 |expire_at|Won't able to use **after** it|
