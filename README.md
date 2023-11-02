@@ -14,9 +14,9 @@ This document is the wiki of [Loyalty Engine](https://github.com/juicyapp/loyalt
     - [Event](components/event.md)
     - [Mission](components/mission.md)
 - ### Working with Loyalty Engine
-    - Scenerios
-    - Schemes planing
-    - Steps to setup
+    - [Scenarios](how-tos/scenarios.md)
+    - [Planning](how-tos/planing.md)
+    - [Steps](how-tos/steps.md)
     - FAQ and Troubleshooting
 
 ## Maintaining this wiki
