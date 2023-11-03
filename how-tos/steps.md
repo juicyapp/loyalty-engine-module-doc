@@ -89,3 +89,4 @@ flowchart LR
     ![Use inheritance](../img/ui-for-reward-mission-with-inheritance.png)
 - ##### Use `MissionProgress` in `RewardSchemeUnit` ?
     You might thinks that can set the `MissionProgress` in `RewardSchemeUnit` along with order points reward scheme, and one reward and one mission can be done in one go. But it is not recommended. Because when client needed to have 2X points event, the mission progress will be doubled. So better not to keeps the flexibility.
+    ![MissionProgress in RewardSchemeUnit](../img/ui-for-mission-progress-together-wth-point.png)
