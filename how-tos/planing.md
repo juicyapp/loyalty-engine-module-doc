@@ -18,7 +18,7 @@ Will describe a formal way to plan a loyalty setup. And also the limitations of 
 
 
 ### Steps to plan a Loyalty setup
-This document author has been working on loyalty setup for 2 years, with different clients, different scenarios. The following steps are the most common way to plan a loyalty setup.
+This document author has been working on loyalty setup for 2 years, with different clients, different scenarios. The following steps are the most organized way to plan a loyalty setup.
 
 1. #### From Scenario to Components
     Draw the diagram from Client's scenarios
@@ -28,7 +28,7 @@ This document author has been working on loyalty setup for 2 years, with differe
     Extract all schemes from diagram, and categorize them into different lists.
     ![From scenario to components](../img/graph-diagram-to-component-lists.png)
 1. #### From Component to Panel UI
-    No brainier, just follow the diagram and setup the panel.
+    More easy to setup the panel and enter it one by one.
     ![From components to setup](../img/graph-from-components-to-setup.png)
 
 ## Understanding the **Limitations**
@@ -96,19 +96,3 @@ Inputs from event might needed to generate in the system.
     - **Input** - User need to input via OPS app or API
 - If extra information is needed but not available or shouldn't entry by OPS / API, need to be **Reserved**, and need to be generated in the system.
 
-
-## Seems many ways to setup a rule
-**But there are sligthly different in the result!!**
-
-### Formula vs Checkpoint
-Some times a calculation can be done by formula or checkpoint. But the result is different.
-![From scenario to components](../img/ui-different-in-formula-and-checkpoint-quantity.png)
-
-- Above examples, Left use `formula 0.1 * 2 quantity` while Right use `formula 0.1 * 1 quantity`
-- Since formula has rounding config, it will round up the result.
-- `0.5` amount will still earn 1 point in the left example, while 0 point in the right example.
-
-### Checkpoint vs Reward
- - Other than Checkpoint, RewardSchemeUnit also can control the quantity, but reware that if the reward is used in other mission, it will also be affected.
- - Therefore it's recommended to use Checkpoint to control the quantity.
- - We can think in a direction that, Setting "closer" from the event trigger will more fit to the scenario, "farther" from the event trigger will more affect the whole program.
