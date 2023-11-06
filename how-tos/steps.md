@@ -39,7 +39,7 @@ This document author has been working on loyalty setup for 2 years, with differe
 
 >After that, we have only `RewardScheme` left. We do a complete setup on `RewardScheme` including `RewardSchemeUnit` and `RewardSchemeCost`. **Since we have all the schemes setup, we doesn't needed to go back create other scheme again.**
 
->Finally we go back to `MissionScheme` to setup `MissionSchemeHook` and `MissionSchemeCheckpoint`. And we are done.
+>Finally we go back to `MissionScheme` to setup `MissionSchemeHook` and `MissionSchemeCheckpoint`. Then the setup is done.
 
 **This steps also applies to creating seed file in starter project!!**
 
