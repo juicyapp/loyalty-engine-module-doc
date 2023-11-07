@@ -17,11 +17,11 @@ This document is the wiki of [Loyalty Engine](https://github.com/juicyapp/loyalt
     - [Scenarios](how-tos/scenarios.md)
     - [Planning](how-tos/planing.md)
     - [Steps](how-tos/steps.md)
-    - FAQ and Troubleshooting
+    - [FAQ and Troubleshooting](how-tos/faq.md)
 
 ## Maintaining this wiki
 
 ### When a new version of Loyalty Engine is released
 As we each version should be documented, please branch out from existing wiki for the new Version, and keep the old version wiki.
 ### When there are wrong information
-Please open a issue with specifing the wrong information and the correct information. We will update the wiki as soon as possible.
+Please open a issue with specifying the wrong information and the correct information. We will update the wiki as soon as possible.

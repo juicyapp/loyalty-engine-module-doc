@@ -18,7 +18,7 @@ sequenceDiagram
 ## Model and Fields
 
 ### Item Scheme
-|Field|Explainations|
+|Field|Explanations|
 |---|---|
 |id|Primary Key|
 |code|Unique Identifier|
@@ -27,7 +27,7 @@ sequenceDiagram
 |usage_count|How many times an item(record) with this scheme can be used (Only affects records after it set) **Null means infinity usages**|
 
 ### Item
-|Field|Explainations|
+|Field|Explanations|
 |---|---|
 |id|Primary Key|
 |account_id|Reference to the account holder|
@@ -40,7 +40,7 @@ sequenceDiagram
 |expire_at|Won't able to use **after** it|
 
 ### Item Usage
-|Field|Explainations|
+|Field|Explanations|
 |---|---|
 |id|Primary Key|
 |account_id|Referring the account who use it|

@@ -41,24 +41,10 @@ flowchart LR
     end
 ```
 
-## Time Settings
-When working of activation and expiry time, we have to use "TimeSetting" component. It consist of calculate **shift** & **round** or a **fixed** time to create different calculation logics. **It is timezone sensitive please always to have utcOffset provided**
-![UI For time settings](../img/ui-for-time-settings.png)
-
-- **Shift** - Add a time shift from the issue time, e.g. `Day +1`, `Month +2`
-- **Round** - Round the time to a specific time after **shift**
-    - e.g.`Day RoundUP (Be the end of that day)`, `Year RoundDown (Be the start of the year)`
-    - A special **Range** option is available when rounded by a count of the unit e.g. **2 Days**, **3 Month** etc.
-- **Fixed** - Use a fixed time, e.g. `2020-01-01 00:00:00`. **Please always set it after the issue time otherwise error may throw in some situations**
-- Examples:
-    - **Shift** `Day +1` **Round** `Day RoundDown`
-        - **Issue Time** `2020-01-01 03:00:00` = **Activate Time** `2020-01-02 00:00:00`
-    - **Shift** `Year +1` **Round** `Year RoundDown`
-        - **Issue Time** `2020-01-01 03:00:00` = **Activate Time** `2021-01-01 00:00:00`
 ## Model and Fields
 
 ### Point Scheme
-|Field|Explainations|
+|Field|Explanations|
 |---|---|
 |id|Primary Key|
 |code|Unique Identifier|
@@ -70,7 +56,7 @@ When working of activation and expiry time, we have to use "TimeSetting" compone
 |max_amount|How much point amount an account can held, if exceeded, point will still issued but amount remain to the ceiling |
 
 ### Point
-|Field|Explainations|
+|Field|Explanations|
 |---|---|
 |id|Primary Key|
 |account_id|Reference to the account holder|
@@ -83,7 +69,7 @@ When working of activation and expiry time, we have to use "TimeSetting" compone
 
 ### Point Usage
 
-|Field|Explainations|
+|Field|Explanations|
 |---|---|
 |id|Primary Key|
 |point_id|Referring to the point (`+ve`) where it used on |

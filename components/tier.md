@@ -18,7 +18,7 @@ If there are no Tier records match the above conditions, the account will be con
 ## Model and Fields
 
 ### Tier Scheme
-|Field|Explainations|
+|Field|Explanations|
 |---|---|
 |id|Primary Key|
 |code|Unique Identifier|
@@ -27,11 +27,11 @@ If there are no Tier records match the above conditions, the account will be con
 |initial|Will be **base tier** when it is true, any new account without any tier will automatic became base tier member. **One Loyalty Program only have One base tier**|
 
 ### Tier
-|Field|Explainations|
+|Field|Explanations|
 |---|---|
 |id|Primary Key|
 |account_id|Reference to the account holder|
 |source|`direct` - Issue to account directly <br />`reward` - Earned from `mission` or `reward` issue|
-|status|`active`, `disable` - For controlling availablilty<br /> `replaced` - Similar with disable, exist tier will replaced when newer tier is assigned|
+|status|`active`, `disable` - For controlling availability<br /> `replaced` - Similar with disable, exist tier will replaced when newer tier is assigned|
 |issued_at|Time of point record added to account|
 |expire_at|Will return to `initial tier` **after** it|

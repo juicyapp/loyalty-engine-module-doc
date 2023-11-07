@@ -6,9 +6,9 @@ For standardization, JuicySuite uses **Loyalty Engine** to manage all loyalty re
 
 ## Entities (Elements)
 
-There are **7 Entities** in Loyalty Engine. For more oraganizated and easy to memories, Enbtities can be separated into 3 categories: **Account**, **Basics Components** and **Interactive Components**.
+There are **7 Entities** in Loyalty Engine. For more organizated and easy to memories, Entities can be separated into 3 categories: **Account**, **Basics Components** and **Interactive Components**.
 
- - **Account** (Repesent a member of the loyalty program)
+ - **Account** (Represent a member of the loyalty program)
  - Basics Components
      - **Point** (Redemption, Credit, etc.)
      - **Item** (Discount, Voucher, Gift, etc.)
@@ -92,14 +92,14 @@ stateDiagram-v2
     Visit --> Missions
     Order --> Missions
     Missions --> is_mission_archive: Calculated by formula, checkpoints
-    is_mission_archive --> [*]: No archivements, do nothing
+    is_mission_archive --> [*]: No achievements, do nothing
     is_mission_archive --> Reward: Mission archived, earn reward
 ``````
 
 ## `CODE` of every schemes
 
-`code` have to be defined in every scheme. It is a unique identifier of the scheme. It is widely used in application or programatically. Since ID may not be same accross different environments, `Code` is used to identify the scheme.
-##### Naming practicies
+`code` have to be defined in every scheme. It is a unique identifier of the scheme. It is widely used in application or programmatically. Since ID may not be same across different environments, `Code` is used to identify the scheme.
+##### Naming practices
 - Hyphenated lowercase
 - No spaces
 - Better if no special characters
@@ -113,9 +113,9 @@ stateDiagram-v2
 
 ## Grouping
 
- - `group_id` exist in account and every scheme. It is for isolating schemes with each other. In other words, different group means differnt "Loyalty Program"
+ - `group_id` exist in account and every scheme. It is for isolating schemes with each other. In other words, different group means different "Loyalty Program"
  - For example, if you have 2 loyalty programs, you can create 2 groups, and create all schemes under the group. This will prevent the schemes from being mixed up.
- - A `NULL` `group_id` means the scheme is shared accross all groups. For example, a `PointScheme` with `group_id` `NULL` means the point can be earned by any account in any group.
+ - A `NULL` `group_id` means the scheme is shared across all groups. For example, a `PointScheme` with `group_id` `NULL` means the point can be earned by any account in any group.
 
 ```mermaid
 ---

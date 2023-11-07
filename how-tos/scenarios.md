@@ -32,8 +32,8 @@ Lets try to briefly translate some real world scenarios into Loyalty Engine comp
 - `MissionScheme` with `formula` x0.05(Basic) x0.1(Silver) x0.15(Diamond) on `amount`
 - `MissionScheme` for each Tier
     - Year-end expiry always be 12-31 of the year
-    - With **on-arheive** checkpoint to upgrade to Silver, Diamond, and a promotion gift `RewardScheme`
-    - With **on-fail** checkpoint to downgrade to Basic, Silver if not fullfill the condition
+    - With **on-archeve** checkpoint to upgrade to Silver, Diamond, and a promotion gift `RewardScheme`
+    - With **on-fail** checkpoint to downgrade to Basic, Silver if not fulfil the condition
 - `MissionScheme` for birthday (1 year periodic)
 - `MissionScheme` for recycle program with `formula` x2 point for each bottle
 
@@ -46,7 +46,7 @@ Lets try to briefly translate some real world scenarios into Loyalty Engine comp
 - `MissionScheme` with `formula` x1, x2(On wednesday / birth month with some tiers), on `amount`
 - `MissionScheme` for each Tier
     - Year-end expiry always be 12-31 of the year
-    - With **on-arheive** checkpoint to upgrade, and a promotion gift `RewardScheme` for some tiers
+    - With **on-archeve** checkpoint to upgrade, and a promotion gift `RewardScheme` for some tiers
 - `MissionScheme` for birthday (1 year periodic)
 
 Matching real world scenarios to Loyalty Engine components can be a practice or validating the features of Loyalty Engine.

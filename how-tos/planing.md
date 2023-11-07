@@ -7,12 +7,12 @@ Will describe a formal way to plan a loyalty setup. And also the limitations of 
 
 ![Confusing Panel](../img/graph-confusing-panel.png)
  - Admin panel breaks down the whole setup into different components, It's hard to understand the whole picture.
- - If the setup done wrongly, it may need to redo the whole setup again. (e.g. Delete all the missions and rewards) very time cosuming... **For platform / a running program, wrong setup will cause great trouble**.
+ - If the setup done wrongly, it may need to redo the whole setup again. (e.g. Delete all the missions and rewards) very time consuming... **For platform / a running program, wrong setup will cause great trouble**.
 > ### Therefore a planned diagram is needed
  - Diagram is not that hard to draw, we only work on **Interactive Components**, and the relationship between them.
  - Once a diagram is done, it can be used to proofread the setup. Review with client and make sure the setup is correct.
  - A diagram can be passed to OPS team (if any) for actual implementation. and also keep as a reference for any future changes.
- - Even a profressional setup guy, a diagram is recommended for team comunication and reference for new comers.
+ - Even a professional setup guy, a diagram is recommended for team communication and reference for new comers.
 #### Template Diagram, feel free to use
 ![Components Plan](../img/template-components-plan.png)
 
@@ -24,7 +24,7 @@ This document author has been working on loyalty setup for 2 years, with differe
     Draw the diagram from Client's scenarios
     ![From scenario to components](../img/graph-from-scenarios-to-diagram.png)
 
-2. #### Categoring components lists
+2. #### Categorising components lists
     Extract all schemes from diagram, and categorize them into different lists.
     ![From scenario to components](../img/graph-diagram-to-component-lists.png)
 1. #### From Component to Panel UI
@@ -32,7 +32,7 @@ This document author has been working on loyalty setup for 2 years, with differe
     ![From components to setup](../img/graph-from-components-to-setup.png)
 
 ## Understanding the **Limitations**
-While doing the planning, we have to bare in mind the limitations. And while dualing with client, we have to explain the limitations to them. And any workaround if possible.
+While doing the planning, we have to bear in mind the limitations. And while dealing with client, we have to explain the limitations to them. And any workaround if possible.
 
 ### ONE `Mission` = ONE `Reward`
 - Assume mission only have 1 kind of reward

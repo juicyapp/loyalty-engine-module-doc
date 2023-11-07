@@ -66,7 +66,7 @@ erDiagram
 ## Model and Fields
 
 ### Reward Scheme
-|Field|Explainations|
+|Field|Explanations|
 |---|---|
 |id|Primary Key|
 |code|Unique Identifier|
@@ -75,7 +75,7 @@ erDiagram
 |redeemable_to|Won't able to redeem **after** it|
 
 ### Reward Scheme Cost
-|Field|Explainations|
+|Field|Explanations|
 |---|---|
 |id|Primary Key|
 |point_scheme_id|What kind of Point to redeem|
@@ -84,16 +84,16 @@ erDiagram
 |limit|Individual limit **within redeemable period (`redeemable_from` to `redeemable_to`)**. **Empty means unlimited**|
 
 ### Reward Scheme Unit
-|Field|Explainations|
+|Field|Explanations|
 |---|---|
 |id|Primary Key|
 |type|**Detail explaination on above** <br/>`point` - Issue Point <br/>`item` - Issue Item <br/>`tier` `tier_extension` `tier_force` - Issue Tier <br/>`mission` `mission_deactivation` `mission_inheritance` - Issue Mission <br/> `mission_progress` - Issue Mission Progress|
 |target_id|`scheme_id` of type, for bindings|
 |quantity|Number of components to be issued|
-|should_instantly_activate|If TRUE, components issued will ignore `activation_setting` **Better off by default** **Please udpate Loyalty Engine UI > 1.0.2 for the version to be off by default** |
+|should_instantly_activate|If TRUE, components issued will ignore `activation_setting` **Better off by default** **Please update Loyalty Engine UI > 1.0.2 for the version to be off by default** |
 
 ### Reward
-|Field|Explainations|
+|Field|Explanations|
 |---|---|
 |id|Primary Key|
 |account_id|Reference to the account holder|

@@ -10,6 +10,6 @@ An Account is the member of a Loyalty Program. It will have his own Point, Tier,
 ## Model and Fields
 
 ### Account
-|Field|Explainations|
+|Field|Explanations|
 |---|---|
 |id|Primary Key|

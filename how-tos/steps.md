@@ -43,8 +43,58 @@ This document author has been working on loyalty setup for 2 years, with differe
 
 **This steps also applies to creating seed file in starter project!!**
 
+## Time Settings
+When working of activation and expiry time, we have to use "TimeSetting" component. It consist of calculate **shift** & **round** or a **fixed** time to create different calculation logics. **It is timezone sensitive please always to have utcOffset provided**
+![UI For time settings](../img/ui-for-time-settings.png)
+
+- **Shift** - Add a time shift from the issue time, e.g. `Day +1`, `Month +2`
+- **Round** - Round the time to a specific time after **shift**
+    - e.g.`Day RoundUP (Be the end of that day)`, `Year RoundDown (Be the start of the year)`
+    - A special **Range** option is available when rounded by a count of the unit e.g. **2 Days**, **3 Month** etc.
+- **Fixed** - Use a fixed time, e.g. `2020-01-01 00:00:00`. **Please always set it after the issue time otherwise error may throw in some situations**
+- Examples:
+    - **Shift** `Day +1` **Round** `Day RoundDown`
+        - **Issue Time** `2020-01-01 03:00:00` = **Activate Time** `2020-01-02 00:00:00`
+    - **Shift** `Year +1` **Round** `Year RoundDown`
+        - **Issue Time** `2020-01-01 03:00:00` = **Activate Time** `2021-01-01 00:00:00`
+        -
+## Formula Builder
+A nested UI builder to build a formula for the hook. The formula will be used to calculate the progress of the mission. **Please consult a developer or loyalty expert when scenario is complicated.**
+
+![Loyalty Engine Setup UI For RewardSchemeUnit](../img/ui-for-formula-builder-explained.png)
+
+#### Formula Builder can be explained in 4 parts
+
+- ##### Formula Type
+    Controls what would the formula return. Settings might differ based on the type.
+    There are 2 types of formula:
+    - **Conditional** - Return value will be TRUE or FALSE
+    - **Calculative** - Return value will be a number
+- ##### Subject
+    A selection which is the entry point of the formula, It can be a a math or logic operations on child formulas. It can be a value that may passed from Event.
+    - **Operator** - A math or logic operation on child formulas, Different Formula Types will have different operators.
+        - Conditional: `AND`, `OR`
+        - Calculative: `SUM`, `MAX`(Pick highest amount), `MIN`(Pick lowest amount)
+    - **Input** - A value that may passed from Event. Options are based on the `InputSchema` of Event Scheme. Different type of input will populate different `Comparator / Multiplier`
+    - **Additional Info** - A value that passed from the context of the event that are not defined in the `InputSchema`. It is controlled in coding level and code change is required to add or remove options.
+- ##### Comparator / Multiplier
+    The part followed by the subject. It is used to compare the subject with a value. The value can be a constant or a formula.
+    - Supported types are `Number`, `String`, `Boolean`, `DateTime` etc. will keep updating by adding new types.
+    - ##### Aggregative Comparator / Multiplier
+        When `subject` is a input type with list of `Object`s i.e. Order Items from POS. comparator will changed to `Aggregative` mode. With additional `Target` and `Method` inputs added before the comparator.
+        ![Loyalty Engine Setup UI For RewardSchemeUnit](../img/ui-for-formula-aggregative-subject.png)
+        - **Target** - A selection based on `Method` input, for subject of value to be calculated before comparing. A default option `quantity` for passing the quantity of the item. Other options are based on the properties of the aggregating Object.
+        - **Method** - Math operation for calculating the value before comparing. Options are:
+            - `COUNT` - Count the number of items
+            - `MAX` - Pick the highest value among the items
+            - `MIN` - Pick the lowest value among the items
+            - `SUM` - Sum up the value of the items
+
+- ##### Sub-Conditions
+    A nested formula builder for building a sub-condition. It is only available on `Calculative` Formula or `Aggregative Comparator`
+
 ## Seems many ways to setup a rule
-**But there are sligthly different in the result!!**
+**But there are slightly different in the result!!**
 
 - ### Formula vs Checkpoint
     Some times a calculation can be done by formula or checkpoint. But the result is different.
